@@ -3,7 +3,7 @@ This software was built in 2024 for Sullivan and West forthcoming.
 
 `timetravelr` is an R package containing tools to work with data vintages, source vintages from the ABS, and ‘send models and associated data pipelines back in time’.
 
-See the [package vignette](vignettes/timetravelr.pdf) (or `vignette("timetravelr")`) for the full manual, including Pseudo-GERTRUDE usage.
+See the [package vignette](vignettes/timetravelr.pdf) (or `vignette("timetravelr")`) for the full manual.
 
 ## What can timetravelr do?
 The package includes four main functionalities:
