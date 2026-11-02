@@ -1,0 +1,34 @@
+Package: timetravelr
+Title: Real-Time Data Vintage Tools; Send Models and Code Back In Time  
+Version: 0.0.2.0
+Authors@R: 
+    person("Hamish", "Sullivan", , "sullivanh@rba.gov.au", role = c("aut", "cre"))
+Description: Real-time data vintages tools. Download data vintages from the ABS and GERTRUDE; create simulated data environments for GERTRUDE and eViews.
+License: use_mit_license()
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Imports:
+    colorspace,
+    dplyr,
+    EviewsR,
+    gganimate,
+    ggplot2,
+    httr,
+    lubridate,
+    purrr,
+    readabs,
+    readr,
+    readxl,
+    rvest,
+    shiny,
+    stringr,
+    tibble,
+    tidyr,
+    tools,
+    utils,
+    zoo
+Suggests:
+    arphit,
+    ggrba,
+    rGertrude

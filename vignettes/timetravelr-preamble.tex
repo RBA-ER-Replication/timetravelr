@@ -1,0 +1,68 @@
+% timetravelr-preamble.tex
+% LaTeX styling template for the PDF-rendered vignette, adapted from the
+% Loaded via the pdf_document "includes: in_header" option in timetravelr.Rmd.
+%
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\linespread{1.06}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{parskip}
+\setlist{itemsep=0.35em, topsep=0.5em, parsep=0pt, leftmargin=1.4em}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{float}
+
+\geometry{margin=1.15in}
+
+% Colour palette -------------------------------------------------------------
+\definecolor{accent}{RGB}{0,71,133}   % deep blue accent for headings/links
+\definecolor{codebg}{RGB}{246,247,249}
+
+% Section heading style --------------------------------------------------------
+\titleformat{\section}{\normalfont\Large\bfseries\color{accent}}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries\color{accent!85!black}}{\thesubsection}{0.8em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries\itshape}{\thesubsubsection}{0.8em}{}
+\titlespacing*{\section}{0pt}{1.6em}{0.9em}
+\titlespacing*{\subsection}{0pt}{1.3em}{0.7em}
+
+% Running header ---------------------------------------------------------------
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape timetravelr: real-time data vintage tools}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{{\color{accent!60}\hrule width\headwidth height\headrulewidth}}
+
+% Code-listing style -------------------------------------------------------
+\lstdefinestyle{Rstyle}{
+  basicstyle=\ttfamily\small,
+  keywordstyle=\bfseries\color{accent},
+  commentstyle=\itshape\color{black!45},
+  stringstyle=\color{teal!70!black},
+  showstringspaces=false,
+  breaklines=true,
+  breakatwhitespace=false,
+  columns=fullflexible,
+  backgroundcolor=\color{codebg},
+  frame=l,
+  framerule=1.6pt,
+  rulecolor=\color{accent},
+  framesep=8pt,
+  xleftmargin=8pt,
+  xrightmargin=4pt,
+  aboveskip=1.1em,
+  belowskip=1.1em,
+  morekeywords={function,library,TRUE,FALSE,NULL,NA}
+}
+\lstset{style=Rstyle}
+\captionsetup{font=small,labelfont={bf,color=accent},labelsep=colon}
+
+% Match the whitepaper's TOC depth (sections and subsections only).
+\setcounter{tocdepth}{2}
